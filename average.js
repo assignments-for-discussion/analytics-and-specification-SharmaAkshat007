@@ -1,8 +1,19 @@
 function average(numbers) {
-  if (numbers.length == 0) {
+  let size = numbers.length;
+
+  if (size == 0) {
     return NaN;
   }
-  return numbers.reduce((p, c) => p + c, 0) / numbers.length;
+
+  return (
+    numbers.reduce((p, c) => {
+      if (isNaN(c)) {
+        size -= 1;
+        return p;
+      }
+      return p + c;
+    }, 0) / size
+  );
 }
 
 module.exports = { average };
