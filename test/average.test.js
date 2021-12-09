@@ -14,3 +14,7 @@ it("reports the average as NaN on an empty list", () => {
 it("ignores NaN in the input", () => {
   expect(average([1, NaN, 2])).to.be.approximately(1.5, 0.01);
 });
+
+it("checks if string is present in input list and then converts it to number", () => {
+  expect(average([1, "2", 3, "4"])).to.be.approximately(2.5, 0.01);
+});
