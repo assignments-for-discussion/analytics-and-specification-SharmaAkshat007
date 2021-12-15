@@ -18,3 +18,7 @@ it("ignores NaN in the input", () => {
 it("checks if string is present in input list and then converts it to number", () => {
   expect(average([1, "2", 3, "4"])).to.be.approximately(2.5, 0.01);
 });
+
+it("find outliers and remove them from the list", () => {
+  expect(average([6, 2, 1, 5, 4, 3, 50])).to.be.approximately(3.5, 0.01);
+});
